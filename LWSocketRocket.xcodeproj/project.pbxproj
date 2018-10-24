@@ -13,7 +13,6 @@
 		BF6647DD21805D1C000D048D /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6647AB21805D1C000D048D /* SRWebSocket.m */; };
 		BF6647DE21805D1C000D048D /* NSRunLoop+SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6647AC21805D1C000D048D /* NSRunLoop+SRWebSocket.m */; };
 		BF6647E021805D1C000D048D /* SRSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6647AF21805D1C000D048D /* SRSecurityPolicy.m */; };
-		BF6647E121805D1C000D048D /* SocketRocket.h in Headers */ = {isa = PBXBuildFile; fileRef = BF6647B021805D1C000D048D /* SocketRocket.h */; };
 		BF6647E221805D1C000D048D /* SRConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = BF6647B221805D1C000D048D /* SRConstants.h */; };
 		BF6647E321805D1C000D048D /* SRProxyConnect.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6647B421805D1C000D048D /* SRProxyConnect.m */; };
 		BF6647E421805D1C000D048D /* SRProxyConnect.h in Headers */ = {isa = PBXBuildFile; fileRef = BF6647B521805D1C000D048D /* SRProxyConnect.h */; };
@@ -51,6 +50,7 @@
 		BF66480421805D1C000D048D /* NSRunLoop+SRWebSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = BF6647DA21805D1C000D048D /* NSRunLoop+SRWebSocket.h */; };
 		BF66480521805D1C000D048D /* SRSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = BF6647DB21805D1C000D048D /* SRSecurityPolicy.h */; };
 		BF66480621805D1C000D048D /* NSURLRequest+SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6647DC21805D1C000D048D /* NSURLRequest+SRWebSocket.m */; };
+		BF6648092180650C000D048D /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6648082180650C000D048D /* libicucore.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +73,6 @@
 		BF6647AB21805D1C000D048D /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
 		BF6647AC21805D1C000D048D /* NSRunLoop+SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRunLoop+SRWebSocket.m"; sourceTree = "<group>"; };
 		BF6647AF21805D1C000D048D /* SRSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSecurityPolicy.m; sourceTree = "<group>"; };
-		BF6647B021805D1C000D048D /* SocketRocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketRocket.h; sourceTree = "<group>"; };
 		BF6647B221805D1C000D048D /* SRConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRConstants.h; sourceTree = "<group>"; };
 		BF6647B421805D1C000D048D /* SRProxyConnect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRProxyConnect.m; sourceTree = "<group>"; };
 		BF6647B521805D1C000D048D /* SRProxyConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRProxyConnect.h; sourceTree = "<group>"; };
@@ -111,6 +110,7 @@
 		BF6647DA21805D1C000D048D /* NSRunLoop+SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSRunLoop+SRWebSocket.h"; sourceTree = "<group>"; };
 		BF6647DB21805D1C000D048D /* SRSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRSecurityPolicy.h; sourceTree = "<group>"; };
 		BF6647DC21805D1C000D048D /* NSURLRequest+SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+SRWebSocket.m"; sourceTree = "<group>"; };
+		BF6648082180650C000D048D /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF6648092180650C000D048D /* libicucore.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +139,7 @@
 				BF66479221805CC5000D048D /* LWSocketRocket */,
 				BF66479D21805CC5000D048D /* LWSocketRocketTests */,
 				BF66479121805CC5000D048D /* Products */,
+				BF6648072180650C000D048D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,15 +174,14 @@
 		BF6647AA21805D1C000D048D /* SocketRocket */ = {
 			isa = PBXGroup;
 			children = (
-				BF6647AB21805D1C000D048D /* SRWebSocket.m */,
-				BF6647AC21805D1C000D048D /* NSRunLoop+SRWebSocket.m */,
-				BF6647AF21805D1C000D048D /* SRSecurityPolicy.m */,
-				BF6647B021805D1C000D048D /* SocketRocket.h */,
 				BF6647B121805D1C000D048D /* Internal */,
-				BF6647D821805D1C000D048D /* NSURLRequest+SRWebSocket.h */,
+				BF6647AB21805D1C000D048D /* SRWebSocket.m */,
 				BF6647D921805D1C000D048D /* SRWebSocket.h */,
 				BF6647DA21805D1C000D048D /* NSRunLoop+SRWebSocket.h */,
+				BF6647AC21805D1C000D048D /* NSRunLoop+SRWebSocket.m */,
 				BF6647DB21805D1C000D048D /* SRSecurityPolicy.h */,
+				BF6647AF21805D1C000D048D /* SRSecurityPolicy.m */,
+				BF6647D821805D1C000D048D /* NSURLRequest+SRWebSocket.h */,
 				BF6647DC21805D1C000D048D /* NSURLRequest+SRWebSocket.m */,
 			);
 			path = SocketRocket;
@@ -273,6 +274,14 @@
 			path = IOConsumer;
 			sourceTree = "<group>";
 		};
+		BF6648072180650C000D048D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6648082180650C000D048D /* libicucore.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -299,7 +308,6 @@
 				BF6647E221805D1C000D048D /* SRConstants.h in Headers */,
 				BF6647EC21805D1C000D048D /* NSURLRequest+SRWebSocketPrivate.h in Headers */,
 				BF6647EE21805D1C000D048D /* SRLog.h in Headers */,
-				BF6647E121805D1C000D048D /* SocketRocket.h in Headers */,
 				BF6647E521805D1C000D048D /* SRRunLoopThread.h in Headers */,
 				BF6647F121805D1C000D048D /* SRSIMDHelpers.h in Headers */,
 				BF6647E421805D1C000D048D /* SRProxyConnect.h in Headers */,

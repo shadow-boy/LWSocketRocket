@@ -17,4 +17,7 @@ FOUNDATION_EXPORT const unsigned char LWSocketRocketVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <LWSocketRocket/PublicHeader.h>
 
 
-#import "SocketRocket.h"
+#import "NSRunLoop+SRWebSocket.h"
+#import "NSURLRequest+SRWebSocket.h"
+#import "SRSecurityPolicy.h"
+#import "SRWebSocket.h"
